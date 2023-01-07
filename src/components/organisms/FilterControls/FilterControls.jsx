@@ -1,8 +1,8 @@
+import Row from '@/components/atoms/Row';
 import Fieldset from '@/components/molecules/Fieldset';
 import Knob from '@/components/molecules/Knob';
 import Switch from '@/components/molecules/Switch';
 import Toggle from '@/components/molecules/Toggle';
-import Row from '@/components/molecules/Row';
 
 export default function FilterControls() {
   return (
@@ -33,9 +33,9 @@ export default function FilterControls() {
           name="keyTrack"
           label="Key Track"
           options={[
-            { value: 1, label: '0%' },
+            { value: 1, label: '100%' },
             { value: 2, label: '50%' },
-            { value: 3, label: '100%' },
+            { value: 3, label: 'Off' },
           ]}
         />
         <Toggle

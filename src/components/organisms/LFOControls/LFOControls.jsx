@@ -1,7 +1,7 @@
+import Row from '@/components/atoms/Row';
 import Fieldset from '@/components/molecules/Fieldset';
 import Knob from '@/components/molecules/Knob';
 import Switch from '@/components/molecules/Switch';
-import Row from '@/components/molecules/Row';
 
 export default function LFOControls() {
   return (

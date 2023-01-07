@@ -1,9 +1,9 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .horizontal {
-  display: flex;
   flex-direction: row;
 }

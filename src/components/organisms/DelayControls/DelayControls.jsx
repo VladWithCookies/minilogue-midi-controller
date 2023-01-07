@@ -1,6 +1,6 @@
+import Row from '@/components/atoms/Row';
 import Fieldset from '@/components/molecules/Fieldset';
 import Knob from '@/components/molecules/Knob';
-import Row from '@/components/molecules/Row';
 
 export default function DelayControls() {
   return (

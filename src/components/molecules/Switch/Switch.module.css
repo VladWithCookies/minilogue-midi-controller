@@ -1,12 +1,11 @@
 .wrapper {
-  padding: 20px;
+  padding: 1rem;
   min-width: fit-content;
 }
 
 .options {
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 .horizontal {
