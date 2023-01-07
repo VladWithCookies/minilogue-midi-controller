@@ -5,6 +5,7 @@ import MixerControls from '@/components/organisms/MixerControls';
 import FilterControls from '@/components/organisms/FilterControls';
 import AmpControls from '@/components/organisms/AmpControls';
 import LFOControls from '@/components/organisms/LFOControls';
+import DelayControls from '@/components/organisms/DelayControls';
 import Layout from '@/components/templates/Layout';
 
 export default function Home() {
@@ -21,6 +22,10 @@ export default function Home() {
       <AmpControls name="ampEG" legend="Amp EG" />
       <AmpControls name="EG"  legend="EG" />
       <LFOControls />
+    </div>
+    <div>
+      <DelayControls />
+      {/* <VoiceModeControls /> */}
     </div>
   </Layout>;
 }
