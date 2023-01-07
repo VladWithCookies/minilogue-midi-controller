@@ -1,7 +1,5 @@
 import Fieldset from '@/components/molecules/Fieldset';
 import Knob from '@/components/molecules/Knob';
-import Switch from '@/components/molecules/Switch';
-import Toggle from '@/components/molecules/Toggle';
 import Row from '@/components/molecules/Row';
 
 export default function AmpControls({ name, legend }) {

@@ -4,6 +4,7 @@ import VCOModulationControls from '@/components/organisms/VCOModulationControls'
 import MixerControls from '@/components/organisms/MixerControls';
 import FilterControls from '@/components/organisms/FilterControls';
 import AmpControls from '@/components/organisms/AmpControls';
+import LFOControls from '@/components/organisms/LFOControls';
 import Layout from '@/components/templates/Layout';
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
     <div>
       <AmpControls name="ampEG" legend="Amp EG" />
       <AmpControls name="EG"  legend="EG" />
-      {/* <LFOControls /> */}
+      <LFOControls />
     </div>
   </Layout>;
 }

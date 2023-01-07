@@ -30,7 +30,8 @@ export default function FilterControls() {
           ]}
         />
         <Switch
-          name="keyTracking"
+          name="keyTrack"
+          label="Key Track"
           options={[
             { value: 1, label: '0%' },
             { value: 2, label: '50%' },
