@@ -1,11 +1,8 @@
 .wrapper {
-  width: fit-content;
+  padding: 20px;
+  text-align: center;
 }
 
 .horizontal {
   display: inline-block;
-}
-
-.label {
-  text-align: center;
 }

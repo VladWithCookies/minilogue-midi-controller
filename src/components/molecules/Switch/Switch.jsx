@@ -29,7 +29,7 @@ export default function Switch({
           )}
         </div>
       ))}
-      {label && <p className={styles.label}>{label}</p>}
+      {label && <p>{label}</p>}
     </div>
   );
 }
