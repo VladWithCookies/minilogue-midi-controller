@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import styles from './Switch.module.css';
 
 export default function Switch({
@@ -10,26 +12,25 @@ export default function Switch({
 }) {
   return (
     <div className={styles.wrapper}>
-      {options.map((option) => (
-        <div
-          key={option.value}
-          className={orientation === 'horizontal' && styles.horizontal}
-        >
-          <input
-            id={option.value}
-            name={name}
-            type="radio"
-            value={option.value}
-            onChange={onChange}
-          />
-          {option.label && (
-            <label htmlFor={option.value}>
-              {option.label}
-            </label>
-          )}
-        </div>
-      ))}
-      {label && <p>{label}</p>}
+      <div className={clsx(styles.options, orientation === 'horizontal' && styles.horizontal)}>
+        {options.map((option) => (
+          <div key={option.value}>
+            <input
+              id={option.value}
+              name={name}
+              type="radio"
+              value={option.value}
+              onChange={onChange}
+            />
+            {option.label && (
+              <label htmlFor={option.value}>
+                {option.label}
+              </label>
+            )}
+          </div>
+        ))}
+      </div>
+      {label && <p className={styles.label}>{label}</p>}
     </div>
   );
 }

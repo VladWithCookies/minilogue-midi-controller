@@ -1,5 +1,4 @@
 import Fieldset from '@/components/molecules/Fieldset';
-import Switch from '@/components/molecules/Switch';
 import Knob from '@/components/molecules/Knob';
 
 export default function MixerControls() {

@@ -2,6 +2,7 @@ import MasterControls from '@/components/organisms/MasterControls';
 import VCOControls from '@/components/organisms/VCOControls';
 import VCOModulationControls from '@/components/organisms/VCOModulationControls';
 import MixerControls from '@/components/organisms/MixerControls';
+import FilterControls from '@/components/organisms/FilterControls';
 import Layout from '@/components/templates/Layout';
 
 export default function Home() {
@@ -13,5 +14,6 @@ export default function Home() {
       <VCOModulationControls />
     </div>
     <MixerControls />
+    <FilterControls />
   </Layout>;
 }

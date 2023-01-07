@@ -1,8 +1,19 @@
 .wrapper {
   padding: 20px;
+  min-width: fit-content;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .horizontal {
-  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.label {
+  text-align: center;
 }
