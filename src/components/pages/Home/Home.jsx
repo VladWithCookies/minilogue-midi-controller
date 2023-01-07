@@ -1,6 +1,7 @@
 import MasterControls from '@/components/organisms/MasterControls';
 import VCOControls from '@/components/organisms/VCOControls';
 import VCOModulationControls from '@/components/organisms/VCOModulationControls';
+import MixerControls from '@/components/organisms/MixerControls';
 import Layout from '@/components/templates/Layout';
 
 export default function Home() {
@@ -11,5 +12,6 @@ export default function Home() {
       <VCOControls name="2" legend="VCO2" />
       <VCOModulationControls />
     </div>
+    <MixerControls />
   </Layout>;
 }
