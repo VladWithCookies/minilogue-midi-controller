@@ -1,0 +1,11 @@
+.wrapper {
+  width: fit-content;
+}
+
+.horizontal {
+  display: inline-block;
+}
+
+.label {
+  text-align: center;
+}
