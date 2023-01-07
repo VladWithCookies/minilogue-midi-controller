@@ -17,7 +17,7 @@ export default function FilterControls() {
           label="Resonance"
         />
         <Knob
-          name="egInt"
+          name="EGInt"
           label="EG Int"
         />
       </Row>
@@ -38,7 +38,7 @@ export default function FilterControls() {
           ]}
         />
         <Toggle
-          name="egInt"
+          name="EGInt"
           label="EG Int"
         />
         <Toggle
