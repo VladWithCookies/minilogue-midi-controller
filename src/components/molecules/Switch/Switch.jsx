@@ -1,26 +1,26 @@
 import clsx from 'clsx';
+import { useFormContext } from 'react-hook-form';
 
 import styles from './Switch.module.css';
 
 export default function Switch({
   name,
   label,
-  value,
-  onChange,
   orientation,
   options = [],
 }) {
+  const { register } = useFormContext();
+
   return (
     <div className={styles.wrapper}>
       <div className={clsx(styles.options, orientation === 'horizontal' && styles.horizontal)}>
-        {options.map((option) => (
-          <div key={option.value}>
+        {options.map((option, index) => (
+          <div key={`${name}-${index}`}>
             <input
               id={option.value}
-              name={name}
               type="radio"
               value={option.value}
-              onChange={onChange}
+              {...register(name)}
             />
             {option.label && (
               <label htmlFor={option.value}>
@@ -30,7 +30,11 @@ export default function Switch({
           </div>
         ))}
       </div>
-      {label && <p className={styles.label}>{label}</p>}
+      {label && (
+        <p className={styles.label}>
+          {label}
+        </p>
+      )}
     </div>
   );
 }

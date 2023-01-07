@@ -1,14 +1,16 @@
+import { useFormContext } from 'react-hook-form';
+
 import styles from './Knob.module.css';
 
-export default function Knob({ name, value, label, onChange }) {
+export default function Knob({ name, label }) {
+  const { register } = useFormContext();
+
   return (
     <div className={styles.wrapper}>
       <input
         id={name}
-        name={name}
         type="range"
-        value={value}
-        onChange={onChange}
+        {...register(name)}
       />
       {label && <label htmlFor={name}>{label}</label>}
     </div>

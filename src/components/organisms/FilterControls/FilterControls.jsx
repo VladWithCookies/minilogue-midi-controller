@@ -39,10 +39,6 @@ export default function FilterControls() {
           ]}
         />
         <Toggle
-          name="EGInt"
-          label="EG Int"
-        />
-        <Toggle
           name="velocity"
           label="Velocity"
         />
