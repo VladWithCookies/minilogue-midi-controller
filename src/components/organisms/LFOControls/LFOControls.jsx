@@ -8,38 +8,38 @@ export default function LFOControls() {
     <Fieldset legend="LFO">
       <Row>
         <Switch
-          name="wave"
+          name="58"
           label="Wave"
           options={[
-            { value: 1, label: '🪚' },
-            { value: 2, label: '📐' },
-            { value: 3, label: '📦' },
+            { value: 127, label: '🪚' },
+            { value: 64, label: '📐' },
+            { value: 0, label: '📦' },
           ]}
         />
         <Switch
-          name="EGMod"
+          name="57"
           label="EG Mod"
           options={[
-            { value: 1, label: 'Int' },
-            { value: 2, label: 'Rate' },
-            { value: 2, label: 'Off' },
+            { value: 127, label: 'Int' },
+            { value: 64, label: 'Rate' },
+            { value: 0, label: 'Off' },
           ]}
         />
         <Knob
-          name="rate"
+          name="24"
           label="Rate"
         />
         <Knob
-          name="int"
+          name="26"
           label="Int"
         />
         <Switch
-          name="target"
+          name="56"
           label="Target"
           options={[
-            { value: 1, label: 'Pitch' },
-            { value: 2, label: 'Shape' },
-            { value: 2, label: 'Cutoff' },
+            { value: 127, label: 'Pitch' },
+            { value: 64, label: 'Shape' },
+            { value: 0, label: 'Cutoff' },
           ]}
         />
       </Row>

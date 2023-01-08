@@ -1,11 +1,14 @@
 .wrapper {
   padding: 1rem;
-  min-width: fit-content;
 }
 
 .options {
   display: flex;
   flex-direction: column;
+}
+
+.option {
+  display: flex;
 }
 
 .horizontal {

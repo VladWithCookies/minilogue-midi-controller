@@ -5,15 +5,15 @@ export default function MixerControls() {
   return (
     <Fieldset legend="Mixer">
       <Knob
-        name="vco1"
+        name="39"
         label="VCO1"
       />
       <Knob
-        name="vco2"
+        name="40"
         label="VCO2"
       />
       <Knob
-        name="noise"
+        name="33"
         label="Noise"
       />
     </Fieldset>

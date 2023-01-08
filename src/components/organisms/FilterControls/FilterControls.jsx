@@ -2,45 +2,49 @@ import Row from '@/components/atoms/Row';
 import Fieldset from '@/components/molecules/Fieldset';
 import Knob from '@/components/molecules/Knob';
 import Switch from '@/components/molecules/Switch';
-import Toggle from '@/components/molecules/Toggle';
 
 export default function FilterControls() {
   return (
     <Fieldset legend="Filter">
       <Knob
-        name="cutoff"
+        name="43"
         label="Cutoff"
       />
       <Row>
         <Knob
-          name="resonance"
+          name="44"
           label="Resonance"
         />
         <Knob
-          name="EGInt"
+          name="45"
           label="EG Int"
         />
       </Row>
       <Row>
         <Switch
-          name="filterType"
+          name="84"
           options={[
-            { value: 1, label: '2-pole' },
-            { value: 2, label: '4-pole' },
+            { value: 0, label: '2-pole' },
+            { value: 127, label: '4-pole' },
           ]}
         />
         <Switch
-          name="keyTrack"
+          name="83"
           label="Key Track"
           options={[
-            { value: 1, label: '100%' },
-            { value: 2, label: '50%' },
-            { value: 3, label: 'Off' },
+            { value: 127, label: '100%' },
+            { value: 64, label: '50%' },
+            { value: 0, label: 'Off' },
           ]}
         />
-        <Toggle
-          name="velocity"
+        <Switch
+          name="82"
           label="Velocity"
+          options={[
+            { value: 127, label: '100%' },
+            { value: 64, label: '50%' },
+            { value: 0, label: 'Off' },
+          ]}
         />
       </Row>
     </Fieldset>

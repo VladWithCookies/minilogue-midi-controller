@@ -2,37 +2,37 @@ import Fieldset from '@/components/molecules/Fieldset';
 import Switch from '@/components/molecules/Switch';
 import Knob from '@/components/molecules/Knob';
 
-export default function VCOControls({ name, legend }) {
+export default function VCO1Controls() {
   return (
     <Fieldset
-      legend={legend}
+      legend="VCO1"
       orientation="horizontal"
     >
       <Switch
-        name="octave"
+        name="48"
         label="Octave"
         options={[
-          { value: 1, label: '1' },
-          { value: 2, label: '2' },
-          { value: 3, label: '3' },
-          { value: 4, label: '4' },
+          { value: 0, label: '1' },
+          { value: 42, label: '2' },
+          { value: 84, label: '3' },
+          { value: 127, label: '4' },
         ]}
       />
       <Switch
-        name="wave"
+        name="50"
         label="Wave"
         options={[
-          { value: 1, label: '🪚' },
-          { value: 2, label: '📐' },
-          { value: 3, label: '📦' },
+          { value: 127, label: '🪚' },
+          { value: 64, label: '📐' },
+          { value: 0, label: '📦' },
         ]}
       />
       <Knob
-        name="pitch"
+        name="34"
         label="Pitch"
       />
       <Knob
-        name="shape"
+        name="36"
         label="Shape"
       />
     </Fieldset>

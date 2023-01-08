@@ -2,24 +2,24 @@ import Row from '@/components/atoms/Row';
 import Fieldset from '@/components/molecules/Fieldset';
 import Knob from '@/components/molecules/Knob';
 
-export default function AmpControls({ name, legend }) {
+export default function EGControls() {
   return (
-    <Fieldset legend={legend}>
+    <Fieldset legend="EG">
       <Row>
         <Knob
-          name="attack"
+          name="20"
           label="Attack"
         />
         <Knob
-          name="decay"
+          name="21"
           label="Decay"
         />
         <Knob
-          name="sustain"
+          name="22"
           label="Sustain"
         />
         <Knob
-          name="release"
+          name="23"
           label="Release"
         />
       </Row>

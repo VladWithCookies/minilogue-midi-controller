@@ -15,7 +15,10 @@ export default function Switch({
     <div className={styles.wrapper}>
       <div className={clsx(styles.options, orientation === 'horizontal' && styles.horizontal)}>
         {options.map((option, index) => (
-          <div key={`${name}-${index}`}>
+          <div
+            key={`${name}-${index}`}
+            className={styles.option}
+          >
             <input
               id={option.value}
               type="radio"

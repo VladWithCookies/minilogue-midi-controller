@@ -10,6 +10,7 @@ export default function Knob({ name, label }) {
       <input
         id={name}
         type="range"
+        max={127}
         {...register(name)}
       />
       {label && <label htmlFor={name}>{label}</label>}
