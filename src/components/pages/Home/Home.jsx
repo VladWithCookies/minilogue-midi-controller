@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
+import { useQuery } from 'react-query';
 import { useForm } from 'react-hook-form';
 
 import { DEFAULT_VALUES } from '@/constants';
+import { getPatches } from '@/api';
+import { toMIDI } from '@/utils';
 import useMIDI from '@/hooks/useMIDI';
 import Col from '@/components/atoms/Col';
 import Form from '@/components/atoms/Form';
@@ -18,19 +21,30 @@ import VoiceModeControls from '@/components/organisms/VoiceModeControls';
 import Layout from '@/components/templates/Layout';
 
 export default function Home() {
+  const { data, isLoading } = useQuery('getPatches', () => getPatches());
   const methods = useForm({ defaultValues: DEFAULT_VALUES });
   const { output } = useMIDI();
 
   useEffect(() => {
-    const subscription = methods.watch((values, { name }) => {
-      const message = [176, name, values[name]];
+    if (!data) return;
 
-      console.log(message);
-      output.send(message);
+    methods.reset(toMIDI(data[0]));
+  }, [methods.reset, data]);
+
+  useEffect(() => {
+    const subscription = methods.watch((values) => {
+      Object.keys(values).forEach((name) => {
+        const message = [176, name, values[name]];
+
+        console.log(message);
+        output.send(message);
+      });
     });
 
     return () => subscription.unsubscribe();
   }, [methods.watch, output]);
+
+  if (isLoading) return;
 
   return (
     <Layout>
