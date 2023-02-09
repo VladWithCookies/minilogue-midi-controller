@@ -42,6 +42,8 @@ export const DEFAULT_VALUES = {
   88: '0',
 };
 
+export const MIDI_CC_MAX = 127;
+
 export const MIDI_CC_VALUES = {
   vco_1_octave: 48,
   vco_1_wave: 50,

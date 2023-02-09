@@ -32,6 +32,8 @@ export default function Home() {
   }, [methods.reset, data]);
 
   useEffect(() => {
+    if (!output) return;
+
     const subscription = methods.watch((values) => {
       Object.keys(values).forEach((name) => {
         const message = [176, name, values[name]];
